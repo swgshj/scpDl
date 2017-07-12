@@ -13,7 +13,7 @@ set passwd [lindex $argv 2]
 
 set passwderror 0  
 
-spawn scp $remote_path $local_file 
+spawn scp -o GSSAPIAuthentication=no $remote_path $local_file 
 
 expect {  
     "*assword:*" {  
