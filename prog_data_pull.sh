@@ -1,15 +1,16 @@
 #!/bin/bash
 
+CONFIG_PATH=./config
 #read download config
 conf_cnt=0
-for file in ./config/*.cfg
+for file in $CONFIG_PATH/*.cfg
 do
     if test -f $file; then
         conf_list[$conf_cnt]=$file
         conf_cnt=$((conf_cnt+1))
     fi
 done
-#echo ${conf_list[*]}
+echo ${conf_list[*]}
 
 for((i=0; i<${#conf_list[@]}; i++))
 do
