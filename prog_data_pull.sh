@@ -43,7 +43,7 @@ do
         fi
         local_path="$local_path/${scp_file##*/}"
         expect scp_dl.exp $remote_path $local_path $ssh_password
-        $SHELL prog_data_handler.sh $local_path
+        $SHELL prog_data_handler.sh $local_path $server_name
     done<$scp_list
 
 done
